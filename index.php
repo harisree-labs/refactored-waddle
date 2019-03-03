@@ -187,11 +187,12 @@ if (location.hash === '#apps') {
 								$title = $json['payload']['posts'][$i]['title'];
 								$subtitle = $json['payload']['posts'][$i]['virtuals']['subtitle'];
 								$uniqueSlug = $json['payload']['posts'][$i]['uniqueSlug'];
+								$tag = $json['payload']['posts'][$i]['virtuals']['tags'][0]['name'];
 
 								echo '<div class="column is-half">
 											<h4 class="title is-4">
 											<a class="latest-repos-title" href="'.$url_base.$uniqueSlug.'">'.$title.'</a>
-											<span class="tag is-small latest-repos-language">¯\_(ツ)_/¯</span>
+											<span class="tag is-small latest-repos-language" style="color: rgb(51, 51, 51); background-color: rgb(241, 224, 90);">'.$tag.'</span>
 											</h4>
 											<p class="latest-repos-description">'.$subtitle.'</p>
 											</div>';
